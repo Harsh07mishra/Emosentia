@@ -1,10 +1,9 @@
-   streamlit
-   opencv-python-headless
-   tensorflow
-   keras
-   fer
-   openai-whisper
-   ffmpeg-python
-   moviepy
-   textblob
-   
+streamlit
+opencv-python-headless
+tensorflow
+keras
+fer
+openai-whisper
+ffmpeg-python==0.2.0
+moviepy==1.0.3
+textblob
