@@ -2,8 +2,15 @@ import streamlit as st
 import tempfile
 import cv2
 import os
+
+# Import moviepy.editor early so that its submodules are registered
+import moviepy.editor
+
+# Now import FER (this will now find moviepy.editor)
 from fer import FER  # Facial Emotion Recognition library
+
 import whisper
+# If you need specific classes from moviepy.editor, you can import them here:
 from moviepy.editor import VideoFileClip, ImageSequenceClip
 import time
 from textblob import TextBlob
@@ -195,4 +202,3 @@ if video_file is not None:
     vid.release()
     os.remove(video_path)    # Remove the original video file
     os.remove(output_video_path)  # Remove the processed video file
-    
